@@ -1,0 +1,17 @@
+.card1 {
+    background-color: blue;
+    opacity: 0.5;
+    background-image: url(https://media.istockphoto.com/vectors/running-man-icon-sign-flat-vector-id1158723576?b=1&k=6&m=1158723576&s=612x612&w=0&h=wzfh9xWM2VP3kd3i2Hv7nGn8tTKelnPULaGifuPg9R8=);
+    background-repeat: no-repeat;
+    background-size: 50% 70%;
+    background-position: 90% 40%;
+}
+
+.card2 {
+    /* background-color: blue; */
+    opacity: 0.5;
+    background-image: url(https://cdn.iconscout.com/icon/premium/png-256-thumb/cycling-2170448-1819200.png);
+    background-repeat: no-repeat;
+    background-size: 50% 60%;
+    background-position: 90% 40%;
+}

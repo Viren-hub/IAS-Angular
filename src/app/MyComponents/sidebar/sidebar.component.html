@@ -1,0 +1,26 @@
+<div [ngClass]="true ? ['bg-dark','demo']:['text-dark','bg-light'] ">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  sidebar collapse">
+        <div class="position-sticky pt-3  ">
+            <ul class="nav flex-column ">
+                <mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+                <li class="nav-item ">
+                    <a class="nav-link active text-light" aria-current="page" href="#">
+                        <span data-feather="home"></span> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="file"></span> Events
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="shopping-cart"></span>Users
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
