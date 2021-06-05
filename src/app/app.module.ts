@@ -12,6 +12,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
+import {MatStepperModule} from '@angular/material/stepper';
+import { EventSteperComponent } from './MyComponents/event-steper/event-steper.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import {ClientServiceService} from "./client-service.service";
+
 
 
 @NgModule({
@@ -20,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    EventCardsComponent
+    EventCardsComponent,
+    EventSteperComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +37,12 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatPaginatorModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule,
+    MatTabsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ClientServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
