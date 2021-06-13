@@ -1,4 +1,6 @@
 .evenCerds {
     height: 120px;
     width: 22%;
+    margin: auto;
+    box-shadow: 8px 5px 5px -2px #888;
 }

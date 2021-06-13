@@ -8,7 +8,6 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary">Yearly</button>
             </div>
             <div class="dropdown ml-2">
-
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
@@ -16,9 +15,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <app-event-cards></app-event-cards>
     <div class="mainbg mt-4 rounded bg-white pt-2 mb-4">
         <h4 class="pl-2">Active User</h4>
@@ -28,6 +25,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>StavaID</th>
                         <th>Cycling</th>
                         <th>Running</th>
                         <th>Walking</th>
@@ -36,24 +34,19 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let user of eventdata">
-                        <td>{{user.callingCodes}}</td>
+                        <td>{{user.id}}</td>
                         <td>{{user.name}}</td>
-                        <td>{{user.region}}</td>
-                        <td>{{user.nativeName}}</td>
-                        <td>{{user.userHours}}</td>
-                        <td>{{user.userHours}}</td>
+                        <td>{{user.stravaId}}</td>
+                        <td>{{user.cycling/1000 | number: '1.2'}} Km</td>
+                        <td>{{user.running/1000 | number: '1.2'}} Km</td>
+                        <td>{{user.walking/1000 | number: '1.2'}} Km</td>
+                        <td>{{user.swim/1000 | number: '1.2'}} Km</td>
                     </tr>
                 </tbody>
-
             </table>
-            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-            </mat-paginator>
         </div>
     </div>
     <div class="mt-5">
         <app-event-steper></app-event-steper>
     </div>
-
-
-
 </main>

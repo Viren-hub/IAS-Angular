@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{LeaderBordDataService} from '../../Services/leader-bord-data.service'
 @Component({
   selector: 'app-event-cards',
   templateUrl: './event-cards.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventCardsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(  private getInfo:LeaderBordDataService) { }
+  lederdata:any={}
   ngOnInit(): void {
+    this.getInfo.getData().subscribe((Response)=>
+      {
+        this.lederdata=Response;
+      })
   }
 
 }

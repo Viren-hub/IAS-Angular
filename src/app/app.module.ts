@@ -17,7 +17,7 @@ import { EventSteperComponent } from './MyComponents/event-steper/event-steper.c
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import {ClientServiceService} from "./client-service.service";
-
+import  {LeaderBordDataService} from './Services/leader-bord-data.service';
 
 
 @NgModule({
@@ -42,7 +42,7 @@ import {ClientServiceService} from "./client-service.service";
     MatTabsModule,
     HttpClientModule
   ],
-  providers: [ClientServiceService],
+  providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
