@@ -1,6 +1,8 @@
 .sidebarbg {
     background-color: rgb(248, 247, 247);
     height: 640px;
+    position: fixed;
+    width: 220px;
 }
 
 .userlogo {

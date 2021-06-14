@@ -18,6 +18,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import {ClientServiceService} from "./client-service.service";
 import  {LeaderBordDataService} from './Services/leader-bord-data.service';
+import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import  {LeaderBordDataService} from './Services/leader-bord-data.service';
     SidebarComponent,
     DashboardComponent,
     EventCardsComponent,
-    EventSteperComponent
+    EventSteperComponent,
+    PopOverComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import  {LeaderBordDataService} from './Services/leader-bord-data.service';
     FormsModule,
     MatStepperModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent]
