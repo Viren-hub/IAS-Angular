@@ -32,6 +32,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     EventSteperComponent,
     PopOverComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,6 +48,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PopOverComponent]
+  
 })
 export class AppModule { }

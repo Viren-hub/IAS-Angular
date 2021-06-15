@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{DialogService} from'../../Services/dialog.service'
 @Component({
   selector: 'app-pop-over',
   templateUrl: './pop-over.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopOverComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private get:DialogService) { }
+  popupData:any={}
   ngOnInit(): void {
+    this.get.getData().subscribe((Response)=>{
+        this.popupData=Response;
+    })
   }
 
 }
