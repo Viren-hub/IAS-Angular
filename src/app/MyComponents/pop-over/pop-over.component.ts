@@ -11,7 +11,7 @@ export class PopOverComponent implements OnInit {
   popupData:any={}
   ngOnInit(): void {
     this.get.getData().subscribe((Response)=>{
-        this.popupData=Response;
+this.popupData=Response;
     })
   }
 

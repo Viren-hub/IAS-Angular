@@ -1,10 +1,16 @@
 .sidebarbg {
-    background-color: rgb(248, 247, 247);
+    background-color: rgb(26, 25, 25);
+    color: white;
     height: 640px;
     position: fixed;
     width: 220px;
     padding: 20px;
     box-shadow: 4px 5px 5px -2px #888;
+}
+
+.sidebarbg a {
+    color: white;
+    text-decoration: none;
 }
 
 .userlogo {
