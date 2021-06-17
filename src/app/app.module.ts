@@ -13,6 +13,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
 import { EventSteperComponent } from './MyComponents/event-steper/event-steper.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +21,7 @@ import {ClientServiceService} from "./client-service.service";
 import  {LeaderBordDataService} from './Services/leader-bord-data.service';
 import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginComponent } from './MyComponents/login/login.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     EventCardsComponent,
     EventSteperComponent,
-    PopOverComponent
+    PopOverComponent,
+    LoginComponent
   ],
 
   imports: [
@@ -45,7 +48,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatStepperModule,
     MatTabsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],

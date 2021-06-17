@@ -1,6 +1,12 @@
 .steper {
     height: 300px;
-    width: 100%;
-    margin: 30px;
+    width: 90%;
+    margin: 10px;
     box-shadow: 8px 5px 5px -2px #888;
+}
+
+@media (max-width: 500px) {
+    .eventSteper {
+        flex-direction: column;
+    }
 }
