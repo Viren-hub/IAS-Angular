@@ -16,27 +16,14 @@ export class DashboardComponent implements OnInit {
       ))
       console.log("AllData",alldata)
       let dialogRef= this.dialog.open(PopOverComponent,{
-        // disableClose: true
       })
-      dialogRef.componentInstance.popupData =alldata[0] ;
-      // open(PopOverComponent,{alldata})
-
-
-//       let dialogRef = this.dialog.open(DialogComponent, {
-//         disableClose: true,
-//     });
-// dialogRef.componentInstance.name = 'Sunil';
+      dialogRef.componentInstance.popupData =alldata[0] ;   
     }
   eventdata:any={}
   lederdata={}
-
-
   ngOnInit(): void {
     this.post.getData().subscribe((res)=>{
-      console.log(res);
-      this.eventdata=res;
-      
-    })
-    
+      this.eventdata=res; 
+    })  
   }
 }

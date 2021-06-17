@@ -10,9 +10,11 @@ export class PopOverComponent implements OnInit {
  stavaID:object
   constructor(private get:DialogService,private getClientData:ClientServiceService) {
     this.stavaID={}
+    console.log("AlldataStava",this.stavaID)
    }
   popupData:any={}
   ngOnInit(): void {
+    this.popupData={}
     this.get.getData().subscribe((Response)=>{
     // this.popupData=Response;
     })
