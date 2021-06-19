@@ -14,9 +14,9 @@ export class DashboardComponent implements OnInit {
        let alldata = this.eventdata.filter((item:any)=>(
         item.stravaId===stravaId 
       ))
-      console.log("AllData",alldata)
-      let dialogRef= this.dialog.open(PopOverComponent,{
-      })
+      console.log("Data in Dashboard Components",alldata)
+      let dialogRef= this.dialog.open(PopOverComponent,{width: '950px', height:'500px',position:{top:'100px'}
+    })
       dialogRef.componentInstance.popupData =alldata[0] ;   
     }
   eventdata:any={}

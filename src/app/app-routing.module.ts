@@ -8,7 +8,7 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
-    path:'',
+    path:'login',
     component:LoginComponent
   }
 ];
