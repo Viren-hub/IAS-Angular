@@ -22,6 +22,8 @@ import  {LeaderBordDataService} from './Services/leader-bord-data.service';
 import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginComponent } from './MyComponents/login/login.component';
+import { TableComponent } from './MyComponents/table/table.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { LoginComponent } from './MyComponents/login/login.component';
     EventCardsComponent,
     EventSteperComponent,
     PopOverComponent,
-    LoginComponent
+    LoginComponent,
+    TableComponent
   ],
 
   imports: [
@@ -49,7 +52,8 @@ import { LoginComponent } from './MyComponents/login/login.component';
     MatTabsModule,
     HttpClientModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],

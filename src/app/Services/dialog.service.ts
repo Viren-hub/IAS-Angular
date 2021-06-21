@@ -4,8 +4,8 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class DialogService {
-
-  url='http://23.95.228.167:8080/api/getUserDetails/16395526';
+  
+  url='http://23.95.228.167:8080/api/getUserDetails';
   constructor(private http :HttpClient) { }
   getData()
   {

@@ -7,14 +7,16 @@ import{ClientServiceService} from '../../client-service.service'
   styleUrls: ['./pop-over.component.css']
 })
 export class PopOverComponent implements OnInit {
- stavaID:object
+ stavaId:any
   constructor(private get:DialogService,private getClientData:ClientServiceService) {
-    this.stavaID={}
+    this.stavaId={}
+    console.log("Data in DialogComponet",this.stavaId)
    }
-  popupData:any={}
+   popupData:any={}
   ngOnInit(): void {
+    this.popupData={}
     this.get.getData().subscribe((Response)=>{
-    // this.popupData=Response;
+    this.popupData=Response;
     })
     
   }
