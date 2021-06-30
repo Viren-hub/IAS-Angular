@@ -24,7 +24,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LoginComponent } from './MyComponents/login/login.component';
 import { TableComponent } from './MyComponents/table/table.component';
 import {MatTableModule} from '@angular/material/table';
-
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -53,7 +53,8 @@ import {MatTableModule} from '@angular/material/table';
     HttpClientModule,
     MatDialogModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],
