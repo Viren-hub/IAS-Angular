@@ -1,27 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
+import { SignInData } from 'src/app/model/signInData';
+import{AuthenticationService} from '../../Services/authentication.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  constructor(private authenticationService:AuthenticationService) { }
+  ngOnInit(): void {
+  }
  loginStatus :boolean=false;
   loginUser(signInForm:NgForm){
     console.log(signInForm);
-    var username= signInForm.value.emailAddressField;
-    var password= signInForm.value.passwordValueField;
-    if(username=='admin@123' && password=='password'){
-      this.router.navigate(['dashboard']);
-    
-     }
-     else{
-       alert("Incorrect username or password")
-     }
+    const signInData = new SignInData(signInForm.value.emailAddressField,signInForm.value.passwordValueField)
+    this.authenticationService.authenticate(signInData)
   }
-  constructor(private router:Router) { }
-  ngOnInit(): void {
-  }
+  
 
 }

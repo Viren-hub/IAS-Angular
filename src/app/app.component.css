@@ -1,3 +1,5 @@
 .mainbackground {
     background-color: #eee;
+    height: auto;
+    width: 100%;
 }

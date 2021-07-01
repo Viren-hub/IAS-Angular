@@ -1,45 +1,18 @@
-<!-- <div class="login-wrapper">
-    <div class="card">
-        <div class="card-body">
-            <form class="form-signin" #signInForm="ngForm">
-                <h1 class="h3 mb-3 font-weight-normal">Please login First</h1>
-
-                <label for="inputlogin" class="sr-only">Username </label>
-                <input type="text" id="inputLogin" class="form-control" name="login" placeholder="Login" ngModel required autofocus>
-
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" autocomplete="on" ngModel required>
-
-                <button class="btn btn-outline-primary btn-block" type="submit">Sign in</button>
-
-                <div class="alert alert-danger" role="alert">
-                    Please fill all fields.
-                </div>
-                <div class="alert alert-danger" role="alert">
-                    Invalid user or password.
-                </div>
-            </form>
-        </div>
+<div class="main-container">
+    <div class="container">
+        <h2>Login</h2><br>
+        <form #signInForm="ngForm" (ngSubmit)='loginUser(signInForm);'>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="emailAddressField" ngModel email required #emailAddressField="ngModel">
+                <small class="form-text text-muted" *ngIf="emailAddressField.touched && !emailAddressField.valid"> please Enter Email Address</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwordValueField" ngModel required #passwordValueField="ngModel">
+                <small class="form-text text-muted" *ngIf="passwordValueField.touched && !passwordValueField.valid"> please Enter password</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-</div> -->
-
-
-<div class="container">
-    <h2>Login</h2><br>
-    <form #signInForm="ngForm" (ngSubmit)='loginUser(signInForm);'>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="emailAddressField" ngModel email required #emailAddressField="ngModel">
-            <small class="form-text text-muted" *ngIf="emailAddressField.touched && !emailAddressField.valid"> please Enter Email Address</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwordValueField" ngModel required #passwordValueField="ngModel">
-            <small class="form-text text-muted" *ngIf="passwordValueField.touched && !passwordValueField.valid"> please Enter password</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
 </div>
-<!-- <div *ngIf="loginUser.isAuthenticated">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta nisi quo amet? Recusandae, natus. Omnis minus asperiores aspernatur, velit iste rem? Corporis id exercitationem odio cupiditate illum hic ratione adipisci?</p>
-</div> -->

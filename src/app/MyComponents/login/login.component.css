@@ -1,19 +1,9 @@
-/* .login-wrapper {
-    height: 524px;
-    width: 1005;
-    margin-left: 30%;
-    margin-top: 2%;
-    width: 30rem;
+.main-container {
+    height: 608px;
+    width: 100%;
+    /* background-color: blue; */
+    padding-top: 100px;
 }
-
-input {
-    margin-bottom: 2rem;
-}
-
-button {
-    margin-bottom: 2rem;
-    margin-left: 180px;
-} */
 
 input.ng-touched.ng-invalid {
     border: 1px solid red;
@@ -27,13 +17,12 @@ h2 {
     padding-left: 150px;
     margin-top: 20px;
     padding-top: 20px;
-    /* border-radius: 10px; */
 }
 
 .container {
     background-color: rgb(255, 255, 255);
     width: 400px;
-    height: 528px;
+    height: 308px;
     padding-bottom: 100px;
     border-radius: 10px;
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0, 3);
