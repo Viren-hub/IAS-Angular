@@ -1,7 +1,5 @@
 .mainbackground {
     background-color: #eee;
-}
-
-.navbarCSS {
-    position: fixed;
+    height: auto;
+    width: auto;
 }

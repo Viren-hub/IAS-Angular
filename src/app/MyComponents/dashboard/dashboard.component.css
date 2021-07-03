@@ -5,3 +5,7 @@
     overflow-x: hidden;
     box-shadow: 8px 5px 5px -2px #888;
 }
+
+.navbarCSS {
+    position: fixed;
+}
