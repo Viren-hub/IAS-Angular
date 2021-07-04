@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ClientServiceService} from './client-service.service'
+import {ClientServiceService} from './Services/client-service.service'
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-root',
