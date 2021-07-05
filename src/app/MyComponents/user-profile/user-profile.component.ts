@@ -9,11 +9,19 @@ import { UserProfileService } from '../../Services/user-profile.service';
 export class UserProfileComponent implements OnInit {
 
   constructor(private post:UserProfileService) { }
-  popupData:any={}
-  eventdata:any={}
+  popupData1:any={}
+  
+  
+  getUserChallangeData:any={}
+  getUserProfileData:any={}
   ngOnInit(): void {
-    this.post.getUserProfileData(this.popupData).subscribe((res)=>{
-      this.eventdata=res; 
+    this.post.getUserChallangeData(this.popupData1).subscribe((res)=>{
+      this.getUserChallangeData=res; 
+      console.log("getUserChallangeData",this.getUserChallangeData)
     })  
+    this.post.getUserProfileData(this.popupData1).subscribe((res)=>{
+      this.getUserProfileData=res;
+      console.log("getUserProfileData",this.getUserProfileData)
+    })
   }
 }

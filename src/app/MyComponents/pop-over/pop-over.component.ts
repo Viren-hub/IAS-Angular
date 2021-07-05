@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfileService } from '../../Services/user-profile.service';
 @Component({
   selector: 'app-pop-over',
   templateUrl: './pop-over.component.html',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopOverComponent implements OnInit {
  stavaId:any
-  constructor() {
+  constructor(private post:UserProfileService) {
     this.stavaId={}
    }
    popupData:any={}
+   Userdata:any={}
+   
   ngOnInit(): void {
+    this.post.getUserProfileData(this.popupData.stravaId).subscribe((Response)=>{
+      this.Userdata=Response;
+    })
   }
+  
 }

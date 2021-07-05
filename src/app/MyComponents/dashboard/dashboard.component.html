@@ -42,7 +42,7 @@
                         <tbody>
                             <tr *ngFor="let user of eventdata">
                                 <td>{{user.id}}</td>
-                                <td><a mat-button (click)="openPopover(user.stravaId)">{{user.name}}</a></td>
+                                <td>{{user.name}}</td>
                                 <td>
                                     <a mat-button (click)="openDialog(user.stravaId)">{{user.stravaId}}</a></td>
                                 <td>{{user.cycling/1000 | number: '1.2'}} Km</td>

@@ -1,4 +1,112 @@
-<h1>Virendra</h1>
-{{popupData.stravaId}}
-<p>Total participate={{eventdata.stravaId}}<br> Total hours={{eventdata.email}}<br> Total Walking={{eventdata.totalWalking}}
-</p>
+<div class="container ">
+    <div class="row scrollCss">
+        <div class="col-lg-4">
+            <div class="profile-card-4 z-depth-3">
+                <div class="card">
+                    <div class="card-body text-center bg-primary rounded-top">
+                        <div class="user-box">
+                            <img src="{{getUserProfileData.photo}}" width="150" alt="user avatar">
+                        </div>
+                        <p>UserData:{{getUserProfileData.email}}</p>
+                        <h5 class="mb-1 text-white">{{getUserChallangeData.name}}</h5>
+                        <p class="text-light">StavaID : {{getUserProfileData.stravaId}}</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group shadow-none">
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-phone-square"></i>
+                                </div>
+                                <div class="list-details">
+                                    <small>Active Days </small>
+                                    <span>{{getUserChallangeData.userActivedays}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="list-details">
+                                    <small>type: </small>
+                                    <span>{{getUserChallangeData[0].name}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="list-details">
+                                    <span>Premium :  </span>
+                                    <small>{{getUserChallangeData.premium}}</small>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <h6 class="text-center">Group Data</h6>
+                    <div class="card-body">
+                        <ul class="list-group shadow-none">
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-phone-square"></i>
+                                </div>
+                                <div class="list-details">
+                                    <small>Active Days </small>
+                                    <span>{{getUserChallangeData.userActivedays}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="list-details">
+                                    <small>Email Address : </small>
+                                    <span>{{getUserChallangeData.email}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="list-details">
+                                    <span>Premium :  </span>
+                                    <small>{{getUserChallangeData.premium}}</small>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem minima quod tenetur voluptas sed error libero officia ducimus voluptatum dolores inventore non, commodi architecto neque magnam at ut velit.</p>
+            <!-- <div class="card z-depth-3 row d-flex flex-row">
+                <div class="card-body col-6 ">
+                    <h6>Cycling </h6>
+                    <p>
+                        {{getUserChallangeData.cycling | number: '1.2'}} Km
+                    </p>
+                    <h6>Running</h6>
+                    <p>
+                        {{getUserChallangeData.running | number: '1.2' }} Km
+                    </p>
+
+                </div>
+                <div class="card-body col-6 ">
+                    <h6>Cycling </h6>
+                    <p>
+                        {{getUserChallangeData.cycling}}
+                    </p>
+                    <h6>Running</h6>
+                    <p>
+                        {{getUserChallangeData.running}}
+                    </p>
+
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+</div>

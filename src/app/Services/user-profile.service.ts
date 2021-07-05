@@ -4,11 +4,18 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserProfileService {
-  url='http://23.95.228.167:8080/api/getUserDetails/32219620'
-  // 'http://23.95.228.167:8080/auth/activities/summary/81275530'
   constructor(private http :HttpClient) { }
-  getUserProfileData(data:any)
+  getUserChallangeData(data:number)
   {
-    return this.http.get(data);
+    console.log("UserprofileService",data)
+    let url='http://23.95.228.167:8080/auth/activities/challengesummary/'
+    return this.http.get(url+data);
+  } 
+  getUserProfileData(data:number)
+  {
+    
+    console.log("UserprofileService",data)
+    let url='http://23.95.228.167:8080/api/getUserDetails/'
+    return this.http.get(url+data);
   } 
 }

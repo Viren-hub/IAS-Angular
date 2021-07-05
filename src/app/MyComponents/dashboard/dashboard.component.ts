@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
       ))
       let dialogRef= this.dialog.open(PopOverComponent,{width: '950px', height:'500px',position:{top:'100px'}
     })
-      dialogRef.componentInstance.popupData =alldata[0] ;   
+      dialogRef.componentInstance.popupData =alldata[0];   
       
     }
     openDialog(stravaId:number) {
@@ -27,7 +27,8 @@ export class DashboardComponent implements OnInit {
       ))
       let dialogRef= this.dialog.open(UserProfileComponent,{width: '950px', height:'500px',position:{top:'100px'}
     })
-      dialogRef.componentInstance.popupData =alldata[0] ;   
+      dialogRef.componentInstance.popupData1 =alldata[0].stravaId; 
+      console.log("DashBoard Data",alldata[0].stravaId)  
     }
   eventdata:any={}
   lederdata={}
