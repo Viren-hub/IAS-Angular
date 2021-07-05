@@ -16,7 +16,7 @@ export class AuthenticationService {
     if (this.checkCredentials(signInData)) {
       this.isAuthenticated = true;
       this.router.navigate(['dashboard']);
-      return true;
+      return true; 
     }
     this.isAuthenticated = false;
     return false;
@@ -32,6 +32,10 @@ export class AuthenticationService {
 
   private checkPassword(password: string): boolean {
     return password === this.mockUser.getPassword();
+  }
+  logout() {
+    this.isAuthenticated = false;
+    this.router.navigate(['']);
   }
   getIsAuthenticated(): boolean {
     return this.isAuthenticated;

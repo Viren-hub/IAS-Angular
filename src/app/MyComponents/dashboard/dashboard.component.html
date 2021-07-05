@@ -43,7 +43,8 @@
                             <tr *ngFor="let user of eventdata">
                                 <td>{{user.id}}</td>
                                 <td><a mat-button (click)="openPopover(user.stravaId)">{{user.name}}</a></td>
-                                <td>{{user.stravaId}}</td>
+                                <td>
+                                    <a mat-button (click)="openDialog(user.stravaId)">{{user.stravaId}}</a></td>
                                 <td>{{user.cycling/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.running/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.walking/1000 | number: '1.2'}} Km</td>
@@ -54,7 +55,9 @@
                 </div>
             </div>
             <div class="mt-5 mb-2">
-                <app-event-steper></app-event-steper>
+
+                <app-sidebar></app-sidebar>
+                <router-outlet></router-outlet>
             </div>
         </main>
     </div>

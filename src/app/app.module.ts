@@ -17,9 +17,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { EventSteperComponent } from './MyComponents/event-steper/event-steper.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
-import {ClientServiceService} from "./client-service.service";
+import {ClientServiceService} from "./Services/client-service.service";
 import  {LeaderBordDataService} from './Services/leader-bord-data.service';
 import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
+import{UserProfileComponent} from './MyComponents/user-profile/user-profile.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginComponent } from './MyComponents/login/login.component';
 import { TableComponent } from './MyComponents/table/table.component';
@@ -36,7 +37,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     EventSteperComponent,
     PopOverComponent,
     LoginComponent,
-    TableComponent
+    TableComponent,
+    UserProfileComponent
   ],
 
   imports: [
@@ -58,7 +60,7 @@ import { ReactiveFormsModule } from '@angular/forms'
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],
-  entryComponents: [PopOverComponent]
+  entryComponents: [PopOverComponent,UserProfileComponent]
   
 })
 export class AppModule { }
