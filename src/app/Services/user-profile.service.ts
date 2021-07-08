@@ -15,7 +15,7 @@ export class UserProfileService {
   {
     
     console.log("UserprofileService",data)
-    let url='http://23.95.228.167:8080/api/getUserDetails/'
+    let url='http://23.95.228.167:8080/api//getUserActivities/'
     return this.http.get(url+data);
   } 
 }

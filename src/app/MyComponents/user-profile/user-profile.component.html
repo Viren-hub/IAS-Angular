@@ -1,16 +1,16 @@
 <div class="container ">
     <div class="row scrollCss">
         <div class="col-lg-4">
-            <div class="profile-card-4 z-depth-3">
-                <div class="card">
-                    <div class="card-body text-center bg-primary rounded-top">
+            <div class="profile-card-4 z-depth-3 ">
+                <div class="card ">
+                    <!-- <div class="card-body text-center bg-primary rounded-top">
                         <div class="user-box">
-                            <img src="{{getUserProfileData.photo}}" width="150" alt="user avatar">
+                            <img class="rounded-circle" src="{{getUserProfileData.photo}}" width="150" alt="user avatar">
                         </div>
                         <p>UserData:{{getUserProfileData.email}}</p>
                         <h5 class="mb-1 text-white">{{getUserChallangeData.name}}</h5>
                         <p class="text-light">StavaID : {{getUserProfileData.stravaId}}</p>
-                    </div>
+                    </div> -->
                     <div class="card-body">
                         <ul class="list-group shadow-none">
                             <li class="list-group-item">
@@ -27,19 +27,41 @@
                                     <i class="fa fa-envelope"></i>
                                 </div>
                                 <div class="list-details">
-                                    <small>type: </small>
-                                    <span>{{getUserChallangeData[0].name}}</span>
+                                    <small>Total Hours :</small>
+                                    <span>{{getUserChallangeData.userTotalHr}}</span>
                                 </div>
                             </li>
                             <li class="list-group-item">
-                                <div class="list-icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
                                 <div class="list-details">
-                                    <span>Premium :  </span>
-                                    <small>{{getUserChallangeData.premium}}</small>
+                                    <span>cycle :  </span>
+                                    <small>{{getUserChallangeData.userCycling}}</small>
                                 </div>
                             </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>Run:  </span>
+                                    <small>{{getUserChallangeData.userRunning}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>Walk :  </span>
+                                    <small>{{getUserChallangeData.totalWalking}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>Hike :  </span>
+                                    <small>{{getUserChallangeData.userHiking}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>Swim :  </span>
+                                    <small>{{getUserChallangeData.userSwimming}}</small>
+                                </div>
+                            </li>
+
                         </ul>
 
                     </div>
@@ -47,30 +69,51 @@
                     <div class="card-body">
                         <ul class="list-group shadow-none">
                             <li class="list-group-item">
-                                <div class="list-icon">
-                                    <i class="fa fa-phone-square"></i>
-                                </div>
                                 <div class="list-details">
-                                    <small>Active Days </small>
-                                    <span>{{getUserChallangeData.userActivedays}}</span>
+                                    <small>TOTAL HOURS:</small>
+                                    <span>{{getUserChallangeData.sumofCycleRunWalk}}</span>
                                 </div>
                             </li>
                             <li class="list-group-item">
-                                <div class="list-icon">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
                                 <div class="list-details">
-                                    <small>Email Address : </small>
-                                    <span>{{getUserChallangeData.email}}</span>
+                                    <small>INDOOR HOURS : </small>
+                                    <span>{{getUserChallangeData.userIndoorHr}}</span>
                                 </div>
                             </li>
                             <li class="list-group-item">
-                                <div class="list-icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
                                 <div class="list-details">
-                                    <span>Premium :  </span>
-                                    <small>{{getUserChallangeData.premium}}</small>
+                                    <span>PARTICIPANTS :  </span>
+                                    <small>{{getUserChallangeData.totalParticipants}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>CYCLE (KMS) :  </span>
+                                    <small>{{getUserChallangeData.totalCycling}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>RUN (KMS) :  </span>
+                                    <small>{{getUserChallangeData.totalRunning}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>WALK (KMS) :  </span>
+                                    <small>{{getUserChallangeData.totalWalking}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>HIKE (M) :  </span>
+                                    <small>{{getUserChallangeData.userHiking}}</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-details">
+                                    <span>SWIM (KMS) :  </span>
+                                    <small>{{getUserChallangeData.totalSwimming}}</small>
                                 </div>
                             </li>
                         </ul>
@@ -81,31 +124,25 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem minima quod tenetur voluptas sed error libero officia ducimus voluptatum dolores inventore non, commodi architecto neque magnam at ut velit.</p>
-            <!-- <div class="card z-depth-3 row d-flex flex-row">
-                <div class="card-body col-6 ">
-                    <h6>Cycling </h6>
-                    <p>
-                        {{getUserChallangeData.cycling | number: '1.2'}} Km
-                    </p>
-                    <h6>Running</h6>
-                    <p>
-                        {{getUserChallangeData.running | number: '1.2' }} Km
-                    </p>
+            <div class="card z-depth-3 row d-flex flex-row mb-2" *ngFor="let data of getUserActivityData">
+                <div class="card-body col-4 bg-primary ">
+                    <h6>WALK</h6>
+                </div>
+                <div class="card-body col-3 ">
 
                 </div>
-                <div class="card-body col-6 ">
-                    <h6>Cycling </h6>
+                <div class="card-body col-3 ">
+                    <!-- <h6>Running</h6> -->
                     <p>
-                        {{getUserChallangeData.cycling}}
+                        <!-- {{getUserActivityData.splits_metric.distance}} -->
                     </p>
-                    <h6>Running</h6>
-                    <p>
-                        {{getUserChallangeData.running}}
-                    </p>
-
                 </div>
-            </div> -->
+                <div class="card-body col-1 ">
+                    <a he>
+                        <mat-icon>delete_forever</mat-icon>
+                    </a>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -13,15 +13,16 @@ export class UserProfileComponent implements OnInit {
   
   
   getUserChallangeData:any={}
-  getUserProfileData:any={}
+  getUserActivityData:any={}
   ngOnInit(): void {
     this.post.getUserChallangeData(this.popupData1).subscribe((res)=>{
       this.getUserChallangeData=res; 
       console.log("getUserChallangeData",this.getUserChallangeData)
     })  
     this.post.getUserProfileData(this.popupData1).subscribe((res)=>{
-      this.getUserProfileData=res;
-      console.log("getUserProfileData",this.getUserProfileData)
+      this.getUserActivityData=res;
+      // let Activitydata=this.getUserActivityData.sort()
+      console.log("getUserProfileData",this.getUserActivityData)
     })
   }
 }

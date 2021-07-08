@@ -1,16 +1,12 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark" *ngIf="authenticationService.isAuthenticated">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <a class="navbar-brand text-white">IndoAthleticSociety</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" routerLink="/dashboard">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" routerLink="/login"> Logout</a>
+        <div class="collapse navbar-collapse float-right" id="navbarNav">
+            <ul class="navbar-nav float-lg-left ">
+                <li class="nav-item float-lg-left">
+                    <a class="nav-link text-white " routerLink="/login">
+                        <mat-icon>logout</mat-icon>
+                    </a>
                 </li>
             </ul>
         </div>
