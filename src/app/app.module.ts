@@ -23,9 +23,11 @@ import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
 import{UserProfileComponent} from './MyComponents/user-profile/user-profile.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginComponent } from './MyComponents/login/login.component';
-import { TableComponent } from './MyComponents/table/table.component';
+// import { TableComponent } from './MyComponents/table/table.component';
 import {MatTableModule} from '@angular/material/table';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,6 @@ import { ReactiveFormsModule } from '@angular/forms'
     EventSteperComponent,
     PopOverComponent,
     LoginComponent,
-    TableComponent,
     UserProfileComponent
   ],
 
@@ -56,7 +57,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     MatDialogModule,
     MatIconModule,
     MatTableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],

@@ -26,3 +26,8 @@
 .runningLogo {
     background: url(../../../assets/runninglogo.png) no-repeat left center;
 }
+
+.limitTextHeight {
+    height: 20px;
+    overflow: hidden;
+}

@@ -7,7 +7,8 @@ import{LoginComponent} from './MyComponents/login/login.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'login',  pathMatch: 'full' },
-  {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard]},
+  {path:'dashboard',component:DashboardComponent},
+  // , canActivate:[AuthGuard]
   {path:'login',component:LoginComponent},
   {path:'events',component: EventSteperComponent,canActivate:[AuthGuard]}
 ];

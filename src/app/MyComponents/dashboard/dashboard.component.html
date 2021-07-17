@@ -1,9 +1,6 @@
 <div class="row">
     <app-sidebar class="col-2 "></app-sidebar>
-
     <div class="col-10">
-
-
         <main class="col-md-9 ms-sm-auto col-lg-12 px-md-4 ">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap  pt-3 pb-2 mb-4 border-bottom">
                 <h4 class="pl-2">Dashboard</h4>
@@ -25,7 +22,6 @@
             <app-event-cards></app-event-cards>
             <!--===========================Data Table===============================-->
             <div class="mainbg mt-4 rounded bg-white pt-2 mb-4 ">
-                <h4 class="pl-2">Active User</h4>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -42,9 +38,8 @@
                         <tbody>
                             <tr *ngFor="let user of eventdata">
                                 <td>{{user.id}}</td>
-                                <td>{{user.name}}</td>
-                                <td>
-                                    <a mat-button (click)="openDialog(user.stravaId)">{{user.stravaId}}</a></td>
+                                <td><a mat-button (click)="openPopover(user.stravaId)">{{user.name}}</a></td>
+                                <td>{{user.stravaId}}</td>
                                 <td>{{user.cycling/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.running/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.walking/1000 | number: '1.2'}} Km</td>
@@ -53,11 +48,6 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="mt-5 mb-2">
-
-                <app-sidebar></app-sidebar>
-                <router-outlet></router-outlet>
             </div>
         </main>
     </div>

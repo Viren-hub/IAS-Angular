@@ -11,16 +11,16 @@
         </div>
         <div class="evenCerds text-center  pt-4  rounded  ml-4" style="background-color: red;">
             <h5>Total Running</h5>
-            <p>{{lederdata.totalRunning}} Km</p>
+            <p>{{lederdata.totalRunning | number: '1.2'}} Km</p>
         </div>
 
         <div class="evenCerds text-center  pt-4  rounded  ml-4" style="background-color: #FFC107;">
             <h5>Total Walking</h5>
-            <p>{{lederdata.totalWalking}} Km</p>
+            <p>{{lederdata.totalWalking | number: '1.2'}} Km</p>
         </div>
         <div class="evenCerds text-center pt-4 rounded  ml-4" style="background-color: #8BC34A;">
             <h5>Total</h5>
-            <p>{{lederdata.sumofCycleRunWalk}} Km</p>
+            <p>{{lederdata.sumofCycleRunWalk | number: '1.2'}} Km</p>
 
         </div>
     </div>

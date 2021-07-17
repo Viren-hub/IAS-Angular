@@ -1,16 +1,8 @@
-<div class="container ">
+<!-- <div class="container ">
     <div class="row scrollCss">
         <div class="col-lg-4">
             <div class="profile-card-4 z-depth-3 ">
                 <div class="card ">
-                    <!-- <div class="card-body text-center bg-primary rounded-top">
-                        <div class="user-box">
-                            <img class="rounded-circle" src="{{getUserProfileData.photo}}" width="150" alt="user avatar">
-                        </div>
-                        <p>UserData:{{getUserProfileData.email}}</p>
-                        <h5 class="mb-1 text-white">{{getUserChallangeData.name}}</h5>
-                        <p class="text-light">StavaID : {{getUserProfileData.stravaId}}</p>
-                    </div> -->
                     <div class="card-body">
                         <ul class="list-group shadow-none">
                             <li class="list-group-item">
@@ -61,16 +53,14 @@
                                     <small>{{getUserChallangeData.userSwimming}}</small>
                                 </div>
                             </li>
-
                         </ul>
-
                     </div>
                     <h6 class="text-center">Group Data</h6>
                     <div class="card-body">
                         <ul class="list-group shadow-none">
                             <li class="list-group-item">
                                 <div class="list-details">
-                                    <small>TOTAL HOURS:</small>
+                                    <small>TOTAL HOURS : </small>
                                     <span>{{getUserChallangeData.sumofCycleRunWalk}}</span>
                                 </div>
                             </li>
@@ -125,19 +115,19 @@
         </div>
         <div class="col-lg-8">
             <div class="card z-depth-3 row d-flex flex-row mb-2" *ngFor="let data of getUserActivityData">
-                <div class="card-body col-4 bg-primary ">
-                    <h6>WALK</h6>
+                <div class="card-body col-2  ">
+                    <h6>{{data.name}}</h6>
                 </div>
-                <div class="card-body col-3 ">
-
+                <div class="card-body col-2 ">
+                    <h6>{{data.type}}</h6>
                 </div>
-                <div class="card-body col-3 ">
-                    <!-- <h6>Running</h6> -->
-                    <p>
-                        <!-- {{getUserActivityData.splits_metric.distance}} -->
-                    </p>
+                <div class="card-body col-2 ">
+                    <h6>{{data.start_date}}</h6>
                 </div>
-                <div class="card-body col-1 ">
+                <div class="card-body col-2 ">
+                    <h6>{{data.distance}}</h6>
+                </div>
+                <div class="card-body col-1 bg-danger ">
                     <a he>
                         <mat-icon>delete_forever</mat-icon>
                     </a>
@@ -146,4 +136,4 @@
         </div>
 
     </div>
-</div>
+</div> -->

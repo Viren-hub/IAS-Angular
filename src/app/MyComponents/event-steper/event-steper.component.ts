@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-steper.component.css']
 })
 export class EventSteperComponent implements OnInit {
+  isReadMore = true
 
+  showText() {
+     this.isReadMore = !this.isReadMore
+  }
   constructor() { }
 
   ngOnInit(): void {
