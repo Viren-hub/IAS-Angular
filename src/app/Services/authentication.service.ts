@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
 
-  private readonly mockUser: SignInData = new SignInData('viren@gmail.com', 'test');
+  private readonly mockUser: SignInData = new SignInData('admin', 'test');
   isAuthenticated = false;
 
   constructor(private router: Router) { }
@@ -18,8 +18,11 @@ export class AuthenticationService {
       this.router.navigate(['dashboard']);
       return true; 
     }
+    else{
+      alert("Invalid Username or password")
     this.isAuthenticated = false;
     return false;
+    }
   }
 
   private checkCredentials(signInData: SignInData): boolean {

@@ -14,16 +14,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
-import { EventSteperComponent } from './MyComponents/event-steper/event-steper.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import {ClientServiceService} from "./Services/client-service.service";
 import  {LeaderBordDataService} from './Services/leader-bord-data.service';
 import { PopOverComponent } from './MyComponents/pop-over/pop-over.component';
-import{UserProfileComponent} from './MyComponents/user-profile/user-profile.component'
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginComponent } from './MyComponents/login/login.component';
-// import { TableComponent } from './MyComponents/table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -36,10 +33,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     SidebarComponent,
     DashboardComponent,
     EventCardsComponent,
-    EventSteperComponent,
     PopOverComponent,
-    LoginComponent,
-    UserProfileComponent
+    LoginComponent
   ],
 
   imports: [
@@ -62,7 +57,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],
-  entryComponents: [PopOverComponent,UserProfileComponent]
+  entryComponents: [PopOverComponent]
   
 })
 export class AppModule { }
