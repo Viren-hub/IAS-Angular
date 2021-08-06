@@ -67,9 +67,9 @@
         </div>
 
         <div class="col-lg-9 ">
-            <!-- <mat-form-field>
-                <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
-            </mat-form-field> -->
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" [(ngModel)]="nameSearch" placeholder="Filter">
+            </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -81,9 +81,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let data of getUserActivityData">
+                    <tr *ngFor="let data of getUserActivityData | filter:nameSearch">
 
-                        <td>{{ (data.length>20)? (data | slice:0:20)+'...':(data.name) }}</td>
+                        <td>{{ data.name |truncate:[20] }}</td>
                         <td>{{data.type}}</td>
                         <td>{{data.start_date}}</td>
                         <td>{{data.distance /1000 | number: '1.2'}} Km</td>

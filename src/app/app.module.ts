@@ -24,17 +24,24 @@ import { LoginComponent } from './MyComponents/login/login.component';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { TruncatePipe } from './Pipes/subString.pipe';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { SortDataPipe } from './pipes/sort-data.pipe';
 
 
 @NgModule({
   declarations: [
+    FilterPipe,
+    TruncatePipe,
     AppComponent,
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
     EventCardsComponent,
     PopOverComponent,
-    LoginComponent
+    LoginComponent,
+    FilterPipe,
+    SortDataPipe
   ],
 
   imports: [

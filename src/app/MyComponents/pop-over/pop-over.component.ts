@@ -17,6 +17,7 @@ export class PopOverComponent implements OnInit {
    dataSource:any;
    getUserActivityData:any;
    newData:any;
+   nameSearch:string=''
   
   
   ngOnInit(): void {
@@ -32,10 +33,6 @@ export class PopOverComponent implements OnInit {
     })
     
   }  
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    console.log("FilterData",filterValue)
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  
   
 }

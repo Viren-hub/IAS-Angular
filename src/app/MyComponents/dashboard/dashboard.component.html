@@ -21,7 +21,11 @@
             </div>
             <app-event-cards></app-event-cards>
             <!--===========================Data Table===============================-->
+
             <div class="mainbg mt-4 rounded bg-white pt-2 mb-4 ">
+                <div class="form-group col-6 float-right">
+                    <input type="text" class="form-control" id="search" [(ngModel)]="nameSearch" placeholder="Filter">
+                </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -36,10 +40,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let user of eventdata">
+                            <tr *ngFor="let user of eventdata | filter:nameSearch | sortData:['cycling']">
                                 <td>{{user.id}}</td>
-                                <td><a mat-button (click)="openPopover(user.stravaId)">{{user.name}}</a></td>
-                                <td>{{user.stravaId}}</td>
+                                <td><a mat-button (click)="openPopover(user.stravaId)">{{user.name |truncate:[20] }}</a></td>
+                                <td>{{user.stravaId }}</td>
                                 <td>{{user.cycling/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.running/1000 | number: '1.2'}} Km</td>
                                 <td>{{user.walking/1000 | number: '1.2'}} Km</td>

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
 
-  private readonly mockUser: SignInData = new SignInData('admin', 'test');
+  private readonly mockUser: SignInData = new SignInData('admin@gmail.com', 'test');
   isAuthenticated = false;
 
   constructor(private router: Router) { }

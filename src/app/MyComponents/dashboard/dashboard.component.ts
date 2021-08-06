@@ -9,6 +9,7 @@ import {MatDialog,MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  nameSearch:string=''
   constructor(private post:ClientServiceService,
     private dialog:MatDialog,private UserDialog:MatDialog) { }
     openPopover(stravaId:number){
@@ -26,5 +27,5 @@ export class DashboardComponent implements OnInit {
     this.post.getData().subscribe((res)=>{
       this.eventdata=res; 
     })  
-  }
+   }
 }
