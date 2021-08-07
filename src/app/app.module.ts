@@ -27,7 +27,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { TruncatePipe } from './Pipes/subString.pipe';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { SortDataPipe } from './pipes/sort-data.pipe';
-
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,8 @@ import { SortDataPipe } from './pipes/sort-data.pipe';
     MatIconModule,
     MatTableModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    AgGridModule.withComponents([])
   ],
   providers: [ClientServiceService,LeaderBordDataService],
   bootstrap: [AppComponent],
