@@ -28,7 +28,7 @@ import { TruncatePipe } from './Pipes/subString.pipe';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { SortDataPipe } from './pipes/sort-data.pipe';
 import { AgGridModule } from 'ag-grid-angular';
-
+import {TableComponent} from './MyComponents/table/table.component'
 @NgModule({
   declarations: [
     FilterPipe,
@@ -41,7 +41,8 @@ import { AgGridModule } from 'ag-grid-angular';
     PopOverComponent,
     LoginComponent,
     FilterPipe,
-    SortDataPipe
+    SortDataPipe,
+    TableComponent
   ],
 
   imports: [
